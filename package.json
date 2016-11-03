@@ -1,0 +1,17 @@
+{
+  "name": "dom-throttle",
+  "version": "0.0.1",
+  "description": "Creates a throttled function that only invokes every `requestAnimationFrame`.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobbuck/dom-throttle.git"
+  },
+  "keywords": ["requestAnimationFrame", "throttle", "debounce"],
+  "author": "Jacob Buck <buck.jacob@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobbuck/dom-throttle/issues"
+  },
+  "homepage": "https://github.com/jacobbuck/dom-throttle"
+}
