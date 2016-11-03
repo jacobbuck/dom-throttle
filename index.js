@@ -6,19 +6,21 @@
  * @param func {Function} The function to throttle.
  * @return {Function} Returns the new throttled function.
  */
-const domThrottle = func => {
-	let requestId = false;
+module.exports = function domThrottle (func) {
+	var requestId = false;
 
-	const throttled = function (...args) {
+	var throttled = function () {
+		var context = this;
+		var args = arguments;
 		if (requestId === false) {
-			requestId = window.requestAnimationFrame(() => {
-				func(...args);
+			requestId = window.requestAnimationFrame(function () {
+				func.apply(context, args);
 				requestId = false;
 			});
 		}
 	};
 
-	throttled.cancel = () => {
+	throttled.cancel = function () {
 		if (requestId !== false) {
 			window.cancelAnimationFrame(requestId);
 			requestId = false;
@@ -27,5 +29,3 @@ const domThrottle = func => {
 
 	return throttled;
 };
-
-export default domThrottle;
