@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Creates and returns a new, throttled version of the passed function,
  * that, when invoked repeatedly, will only actually call the original

@@ -1,6 +1,6 @@
 {
   "name": "dom-throttle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Creates a throttled function that only invokes every `requestAnimationFrame`.",
   "main": "index.js",
   "repository": {
